@@ -1,0 +1,1013 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://www.loa.istc.cnr.it/ontologies/DOLCE-Lite.owl", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "https://schema.org", "http://www.w3.org/2001/XMLSchema", "http://example.org/caso", "http://xmlns.com/foaf/0.1" ],
+    "iri" : "http://example.org/caso#CarAccidentSeverityOntology",
+    "author" : [ "Tibebe Beshah" ],
+    "description" : {
+      "undefined" : "\n\n\n        The Car Accident Severity Ontology (CASO) addresses this challenge by providing a comprehensive and reusable semantic model for representing car accident severity and its associated factors. CASO leverages established ontologies and vocabularies to ensure interoperability with existing datasets and tools, while introducing domain-specific concepts tailored to accident analysis. By formalizing the relationships between accident entities, CASO enables advanced querying, reasoning, and knowledge extraction, supporting applications in accident investigation, risk assessment, and policy development.\n\n        This document outlines the structure, design principles, and potential use cases of CASO, demonstrating its value as a resource for researchers and practitioners in the field of transportation safety.\n    "
+    },
+    "labels" : {
+      "undefined" : "Car Accident Severity Ontology (CASO)"
+    },
+    "comments" : {
+      "undefined" : "An ontology for modeling car accident severity and related factors. Reuses existing vocabularies where applicable."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Tibebe Beshah",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "undefined",
+        "value" : "\n        The Car Accident Severity Ontology (CASO) is a formalized knowledge representation framework designed to model factors influencing the severity of car accidents.\n    ",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2024-01-28",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "5",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "7",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Literal"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://example.org/caso#Accident",
+    "baseIri" : "http://example.org/caso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Accident",
+      "undefined" : "Accident"
+    },
+    "comment" : {
+      "undefined" : "Represents an accident event."
+    },
+    "attributes" : [ "external" ],
+    "id" : "13",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "https://schema.org/Vehicle",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Vehicle"
+    },
+    "subClasses" : [ "16" ],
+    "attributes" : [ "external" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "12",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "8",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "18",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "10",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "19",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "21",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "7",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#DataOneOf",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataOneOf"
+    },
+    "attributes" : [ "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "attributes" : [ "anonymous" ],
+    "id" : "36"
+  }, {
+    "instances" : 0,
+    "attributes" : [ "anonymous" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://example.org/caso#Road",
+    "baseIri" : "http://example.org/caso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Road",
+      "undefined" : "Road"
+    },
+    "comment" : {
+      "undefined" : "Represents the road conditions during an accident."
+    },
+    "attributes" : [ "external" ],
+    "id" : "38",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "4",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "instances" : 0,
+    "attributes" : [ "anonymous" ],
+    "id" : "40"
+  }, {
+    "instances" : 0,
+    "attributes" : [ "anonymous" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Person",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "subClasses" : [ "43", "1" ],
+    "attributes" : [ "external" ],
+    "id" : "42"
+  }, {
+    "instances" : 0,
+    "attributes" : [ "anonymous" ],
+    "id" : "44"
+  }, {
+    "instances" : 0,
+    "attributes" : [ "anonymous" ],
+    "id" : "47"
+  }, {
+    "instances" : 0,
+    "attributes" : [ "anonymous" ],
+    "id" : "51"
+  }, {
+    "instances" : 0,
+    "attributes" : [ "anonymous" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://example.org/caso#Casualty",
+    "baseIri" : "http://example.org/caso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Casualty",
+      "undefined" : "Casualty"
+    },
+    "comment" : {
+      "undefined" : "Represents the victims or casualties of an accident."
+    },
+    "attributes" : [ "external" ],
+    "id" : "43",
+    "superClasses" : [ "42" ]
+  }, {
+    "instances" : 0,
+    "attributes" : [ "anonymous" ],
+    "id" : "53"
+  }, {
+    "instances" : 0,
+    "attributes" : [ "anonymous" ],
+    "id" : "54"
+  }, {
+    "instances" : 0,
+    "attributes" : [ "anonymous" ],
+    "id" : "55"
+  }, {
+    "instances" : 0,
+    "attributes" : [ "anonymous" ],
+    "id" : "56"
+  }, {
+    "instances" : 0,
+    "attributes" : [ "anonymous" ],
+    "id" : "57"
+  }, {
+    "instances" : 0,
+    "attributes" : [ "anonymous" ],
+    "id" : "59"
+  }, {
+    "instances" : 0,
+    "attributes" : [ "anonymous" ],
+    "id" : "62"
+  }, {
+    "instances" : 0,
+    "attributes" : [ "anonymous" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://example.org/caso#Driver",
+    "baseIri" : "http://example.org/caso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Driver",
+      "undefined" : "Driver"
+    },
+    "comment" : {
+      "undefined" : "Represents the driver involved in an accident."
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "42" ]
+  }, {
+    "iri" : "http://www.loa.istc.cnr.it/ontologies/DOLCE-Lite.owl#Event",
+    "baseIri" : "http://www.loa.istc.cnr.it/ontologies/DOLCE-Lite.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event"
+    },
+    "subClasses" : [ "13" ],
+    "attributes" : [ "external" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://example.org/caso#Environment",
+    "baseIri" : "http://example.org/caso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Environment",
+      "undefined" : "Environment"
+    },
+    "comment" : {
+      "undefined" : "Represents the environmental conditions during an accident."
+    },
+    "attributes" : [ "external" ],
+    "id" : "72",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "https://schema.org/Place",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Place"
+    },
+    "subClasses" : [ "38", "72" ],
+    "attributes" : [ "external" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://example.org/caso#Vehicle",
+    "baseIri" : "http://example.org/caso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Vehicle",
+      "undefined" : "Vehicle"
+    },
+    "comment" : {
+      "undefined" : "Represents the vehicle involved in an accident."
+    },
+    "attributes" : [ "external" ],
+    "id" : "16",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "79",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "68",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "66",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "76",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "32",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "50",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "75",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://example.org/caso#hasGender",
+    "baseIri" : "http://example.org/caso",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasGender",
+      "undefined" : "Driver Gender"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "The gender of the driver."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://example.org/caso#hasAge",
+    "baseIri" : "http://example.org/caso",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasAge",
+      "undefined" : "Driver Age"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "The age of the driver."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://example.org/caso#hasSurfaceCondition",
+    "baseIri" : "http://example.org/caso",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "hasSurfaceCondition",
+      "undefined" : "Road Surface Condition"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "The condition of the road surface."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://example.org/caso#hasLaneType",
+    "baseIri" : "http://example.org/caso",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasLaneType",
+      "undefined" : "Road Lane Type"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "The type of road lane."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://example.org/caso#hasVehicleMovement",
+    "baseIri" : "http://example.org/caso",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasVehicleMovement",
+      "undefined" : "Vehicle Movement"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "The movement of the vehicle during the accident."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://example.org/caso#hasDrivingExperience",
+    "baseIri" : "http://example.org/caso",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "hasDrivingExperience",
+      "undefined" : "Driving Experience"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "The driving experience of the driver in years."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://example.org/caso#hasClass",
+    "baseIri" : "http://example.org/caso",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "hasClass",
+      "undefined" : "Casualty Class"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "The class of the casualty (e.g., driver, pedestrian, passenger)."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "26"
+  }, {
+    "iri" : "http://example.org/caso#hasType",
+    "baseIri" : "http://example.org/caso",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "hasType",
+      "undefined" : "Vehicle Type"
+    },
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "The type of vehicle involved in the accident."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://example.org/caso#hasDefect",
+    "baseIri" : "http://example.org/caso",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "hasDefect",
+      "undefined" : "Vehicle Defect"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "The defect status of the vehicle."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://example.org/caso#hasVehicleRelation",
+    "baseIri" : "http://example.org/caso",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "hasVehicleRelation",
+      "undefined" : "Vehicle Relation"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "The relationship of the driver to the vehicle."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://example.org/caso#hasEducationLevel",
+    "baseIri" : "http://example.org/caso",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "hasEducationLevel",
+      "undefined" : "Education Level"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "The education level of the driver."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "32"
+  }, {
+    "iri" : "http://example.org/caso#hasSurfaceType",
+    "baseIri" : "http://example.org/caso",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "hasSurfaceType",
+      "undefined" : "Road Surface Type"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "The type of road surface."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://example.org/caso#hasJunctionType",
+    "baseIri" : "http://example.org/caso",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "hasJunctionType",
+      "undefined" : "Junction Type"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "The type of junction on the road."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://example.org/caso#hasSeverity",
+    "baseIri" : "http://example.org/caso",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "hasSeverity",
+      "undefined" : "Accident Severity"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "The severity of the accident."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://example.org/caso#hasArea",
+    "baseIri" : "http://example.org/caso",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "hasArea",
+      "undefined" : "Accident Area"
+    },
+    "domain" : "13",
+    "comment" : {
+      "undefined" : "The area where the accident occurred."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "49"
+  }, {
+    "iri" : "http://example.org/caso#hasWork",
+    "baseIri" : "http://example.org/caso",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "hasWork",
+      "undefined" : "Casualty Work"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "The occupation of the casualty."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "50"
+  }, {
+    "iri" : "http://example.org/caso#hasPedestrianMovement",
+    "baseIri" : "http://example.org/caso",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasPedestrianMovement",
+      "undefined" : "Pedestrian Movement"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "The movement of the pedestrian during the accident."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://example.org/caso#hasWeatherCondition",
+    "baseIri" : "http://example.org/caso",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "hasWeatherCondition",
+      "undefined" : "Weather Condition"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "The weather condition during the accident."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://example.org/caso#hasServiceLife",
+    "baseIri" : "http://example.org/caso",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "hasServiceLife",
+      "undefined" : "Service Life"
+    },
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "The service life of the vehicle in years."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://example.org/caso#hasLightCondition",
+    "baseIri" : "http://example.org/caso",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "hasLightCondition",
+      "undefined" : "Light Condition"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "The light condition during the accident."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://example.org/caso#hasFitness",
+    "baseIri" : "http://example.org/caso",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "hasFitness",
+      "undefined" : "Casualty Fitness"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "The fitness or health condition of the casualty."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://example.org/caso#hasAlignment",
+    "baseIri" : "http://example.org/caso",
+    "range" : "68",
+    "label" : {
+      "IRI-based" : "hasAlignment",
+      "undefined" : "Road Alignment"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "The alignment of the road."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "67"
+  }, {
+    "range" : "39",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "69"
+  }, {
+    "range" : "14",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "70"
+  }, {
+    "range" : "39",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "71"
+  }, {
+    "range" : "42",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "73"
+  }, {
+    "range" : "42",
+    "domain" : "43",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "74"
+  }, {
+    "iri" : "http://example.org/caso#hasCause",
+    "baseIri" : "http://example.org/caso",
+    "range" : "76",
+    "label" : {
+      "IRI-based" : "hasCause",
+      "undefined" : "Cause of Accident"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "The cause of the accident."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "75"
+  }, {
+    "range" : "15",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "77"
+  }, {
+    "iri" : "http://example.org/caso#hasCollisionType",
+    "baseIri" : "http://example.org/caso",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "hasCollisionType",
+      "undefined" : "Collision Type"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "The type of collision during the accident."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "78"
+  } ]
+}
