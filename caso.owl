@@ -6,11 +6,16 @@
 @prefix schema: <https://schema.org/> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix dolce: <http://www.loa.istc.cnr.it/ontologies/DOLCE-Lite.owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # Ontology Declaration
 caso:CarAccidentSeverityOntology a owl:Ontology ;
     rdfs:label "Car Accident Severity Ontology (CASO)" ;
-    rdfs:comment "An ontology for modeling car accident severity and related factors. Reuses existing vocabularies where applicable." .
+    rdfs:comment "An ontology for modeling car accident severity and related factors. Reuses existing vocabularies where applicable." ;
+    dct:issued "2023-10-01"^^xsd:date ;
+    dct:creator "Tibebe Beshah" ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> .
 
 # Classes
 ## Reused Classes
@@ -48,7 +53,7 @@ caso:Casualty a owl:Class ;
 ## Reused Properties
 caso:hasGender a owl:DatatypeProperty ;
     rdfs:domain caso:Driver ;
-    rdfs:range foaf:gender ;
+    rdfs:range xsd:string ;  # Or use an enumerated list
     rdfs:label "Driver Gender" ;
     rdfs:comment "The gender of the driver." .
 
@@ -66,7 +71,7 @@ caso:hasDrivingExperience a owl:DatatypeProperty ;
 
 caso:hasEducationLevel a owl:DatatypeProperty ;
     rdfs:domain caso:Driver ;
-    rdfs:range schema:EducationalOccupationalCredential ;
+    rdfs:range xsd:string ;  # Or use an enumerated list
     rdfs:label "Education Level" ;
     rdfs:comment "The education level of the driver." .
 
@@ -78,7 +83,7 @@ caso:hasVehicleRelation a owl:ObjectProperty ;
 
 caso:hasType a owl:DatatypeProperty ;
     rdfs:domain caso:Vehicle ;
-    rdfs:range schema:vehicleType ;
+    rdfs:range xsd:string ;  # Or use an enumerated list
     rdfs:label "Vehicle Type" ;
     rdfs:comment "The type of vehicle involved in the accident." .
 
@@ -204,4 +209,3 @@ caso:hasPedestrianMovement a owl:DatatypeProperty ;
     rdfs:range [ a owl:DataOneOf ;
                  owl:oneOf ( "While following a vehicle" "While walking with his left hand where there is no footpath" "While traveling on a road without a pedestrian crossing" "While crossing the pedestrian crossing line" "While walking on the sidewalk" "Sitting or lying down in the driveway" "Getting on or off a vehicle" "Others" ) ] ;
     rdfs:label "Pedestrian Movement" ;
-    rdfs:comment "The movement of the pedestrian during the accident." .
