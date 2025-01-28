@@ -1,0 +1,792 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/caso#CarAccidentSeverityOntology#"
+     xml:base="http://example.org/caso#CarAccidentSeverityOntology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://example.org/caso#CarAccidentSeverityOntology">
+        <terms:abstract>
+        The Car Accident Severity Ontology (CASO) is a formalized knowledge representation framework designed to model factors influencing the severity of car accidents.
+    </terms:abstract>
+        <terms:creator>Tibebe Beshah</terms:creator>
+        <terms:description>
+
+
+        The Car Accident Severity Ontology (CASO) addresses this challenge by providing a comprehensive and reusable semantic model for representing car accident severity and its associated factors. CASO leverages established ontologies and vocabularies to ensure interoperability with existing datasets and tools, while introducing domain-specific concepts tailored to accident analysis. By formalizing the relationships between accident entities, CASO enables advanced querying, reasoning, and knowledge extraction, supporting applications in accident investigation, risk assessment, and policy development.
+
+        This document outlines the structure, design principles, and potential use cases of CASO, demonstrating its value as a resource for researchers and practitioners in the field of transportation safety.
+    </terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-28</terms:issued>
+        <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <rdfs:comment>An ontology for modeling car accident severity and related factors. Reuses existing vocabularies where applicable.</rdfs:comment>
+        <rdfs:label>Car Accident Severity Ontology (CASO)</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/caso#hasAlignment -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/caso#hasAlignment">
+        <rdfs:domain rdf:resource="http://example.org/caso#Road"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/caso#hasArea -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/caso#hasArea">
+        <rdfs:domain rdf:resource="http://example.org/caso#Accident"/>
+        <rdfs:range rdf:resource="https://schema.org/Place"/>
+        <rdfs:comment>The area where the accident occurred.</rdfs:comment>
+        <rdfs:label>Accident Area</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/caso#hasCause -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/caso#hasCause">
+        <rdfs:domain rdf:resource="http://example.org/caso#Accident"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/caso#hasClass -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/caso#hasClass">
+        <rdfs:domain rdf:resource="http://example.org/caso#Casualty"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/caso#hasCollisionType -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/caso#hasCollisionType">
+        <rdfs:domain rdf:resource="http://example.org/caso#Accident"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/caso#hasDefect -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/caso#hasDefect">
+        <rdfs:domain rdf:resource="http://example.org/caso#Vehicle"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/caso#hasFitness -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/caso#hasFitness">
+        <rdfs:domain rdf:resource="http://example.org/caso#Casualty"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/caso#hasJunctionType -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/caso#hasJunctionType">
+        <rdfs:domain rdf:resource="http://example.org/caso#Road"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/caso#hasLaneType -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/caso#hasLaneType">
+        <rdfs:domain rdf:resource="http://example.org/caso#Road"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/caso#hasLightCondition -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/caso#hasLightCondition">
+        <rdfs:domain rdf:resource="http://example.org/caso#Environment"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/caso#hasPedestrianMovement -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/caso#hasPedestrianMovement">
+        <rdfs:domain rdf:resource="http://example.org/caso#Casualty"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/caso#hasSeverity -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/caso#hasSeverity">
+        <rdfs:domain rdf:resource="http://example.org/caso#Accident"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/caso#hasSurfaceCondition -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/caso#hasSurfaceCondition">
+        <rdfs:domain rdf:resource="http://example.org/caso#Road"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/caso#hasSurfaceType -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/caso#hasSurfaceType">
+        <rdfs:domain rdf:resource="http://example.org/caso#Road"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/caso#hasVehicleMovement -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/caso#hasVehicleMovement">
+        <rdfs:domain rdf:resource="http://example.org/caso#Accident"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/caso#hasVehicleRelation -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/caso#hasVehicleRelation">
+        <rdfs:domain rdf:resource="http://example.org/caso#Driver"/>
+        <rdfs:range rdf:resource="http://example.org/caso#Vehicle"/>
+        <rdfs:comment>The relationship of the driver to the vehicle.</rdfs:comment>
+        <rdfs:label>Vehicle Relation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/caso#hasWeatherCondition -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/caso#hasWeatherCondition">
+        <rdfs:domain rdf:resource="http://example.org/caso#Environment"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/caso#hasWork -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/caso#hasWork">
+        <rdfs:domain rdf:resource="http://example.org/caso#Casualty"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/caso#hasAge -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasAge">
+        <rdfs:domain rdf:resource="http://example.org/caso#Driver"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>The age of the driver.</rdfs:comment>
+        <rdfs:label>Driver Age</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/caso#hasAlignment -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasAlignment"/>
+    
+
+
+    <!-- http://example.org/caso#hasCause -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasCause"/>
+    
+
+
+    <!-- http://example.org/caso#hasClass -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasClass"/>
+    
+
+
+    <!-- http://example.org/caso#hasCollisionType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasCollisionType"/>
+    
+
+
+    <!-- http://example.org/caso#hasDefect -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasDefect"/>
+    
+
+
+    <!-- http://example.org/caso#hasDrivingExperience -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasDrivingExperience">
+        <rdfs:domain rdf:resource="http://example.org/caso#Driver"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>The driving experience of the driver in years.</rdfs:comment>
+        <rdfs:label>Driving Experience</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/caso#hasEducationLevel -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasEducationLevel">
+        <rdfs:domain rdf:resource="http://example.org/caso#Driver"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The education level of the driver.</rdfs:comment>
+        <rdfs:label>Education Level</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/caso#hasFitness -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasFitness"/>
+    
+
+
+    <!-- http://example.org/caso#hasGender -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasGender">
+        <rdfs:domain rdf:resource="http://example.org/caso#Driver"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The gender of the driver.</rdfs:comment>
+        <rdfs:label>Driver Gender</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/caso#hasJunctionType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasJunctionType"/>
+    
+
+
+    <!-- http://example.org/caso#hasLaneType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasLaneType"/>
+    
+
+
+    <!-- http://example.org/caso#hasLightCondition -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasLightCondition"/>
+    
+
+
+    <!-- http://example.org/caso#hasPedestrianMovement -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasPedestrianMovement"/>
+    
+
+
+    <!-- http://example.org/caso#hasServiceLife -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasServiceLife">
+        <rdfs:domain rdf:resource="http://example.org/caso#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>The service life of the vehicle in years.</rdfs:comment>
+        <rdfs:label>Service Life</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/caso#hasSeverity -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasSeverity"/>
+    
+
+
+    <!-- http://example.org/caso#hasSurfaceCondition -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasSurfaceCondition"/>
+    
+
+
+    <!-- http://example.org/caso#hasSurfaceType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasSurfaceType"/>
+    
+
+
+    <!-- http://example.org/caso#hasType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasType">
+        <rdfs:domain rdf:resource="http://example.org/caso#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The type of vehicle involved in the accident.</rdfs:comment>
+        <rdfs:label>Vehicle Type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/caso#hasVehicleMovement -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasVehicleMovement"/>
+    
+
+
+    <!-- http://example.org/caso#hasWeatherCondition -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasWeatherCondition"/>
+    
+
+
+    <!-- http://example.org/caso#hasWork -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/caso#hasWork"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/caso#Accident -->
+
+
+    <owl:Class rdf:about="http://example.org/caso#Accident">
+        <rdfs:subClassOf rdf:resource="http://www.loa.istc.cnr.it/ontologies/DOLCE-Lite.owl#Event"/>
+        <rdfs:comment>Represents an accident event.</rdfs:comment>
+        <rdfs:label>Accident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/caso#Casualty -->
+
+
+    <owl:Class rdf:about="http://example.org/caso#Casualty">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment>Represents the victims or casualties of an accident.</rdfs:comment>
+        <rdfs:label>Casualty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/caso#Driver -->
+
+
+    <owl:Class rdf:about="http://example.org/caso#Driver">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment>Represents the driver involved in an accident.</rdfs:comment>
+        <rdfs:label>Driver</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/caso#Environment -->
+
+
+    <owl:Class rdf:about="http://example.org/caso#Environment">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Place"/>
+        <rdfs:comment>Represents the environmental conditions during an accident.</rdfs:comment>
+        <rdfs:label>Environment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/caso#Road -->
+
+
+    <owl:Class rdf:about="http://example.org/caso#Road">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Place"/>
+        <rdfs:comment>Represents the road conditions during an accident.</rdfs:comment>
+        <rdfs:label>Road</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/caso#Vehicle -->
+
+
+    <owl:Class rdf:about="http://example.org/caso#Vehicle">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Vehicle"/>
+        <rdfs:comment>Represents the vehicle involved in an accident.</rdfs:comment>
+        <rdfs:label>Vehicle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa.istc.cnr.it/ontologies/DOLCE-Lite.owl#Event -->
+
+
+    <owl:Class rdf:about="http://www.loa.istc.cnr.it/ontologies/DOLCE-Lite.owl#Event"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#DataOneOf -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#DataOneOf"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- https://schema.org/Place -->
+
+
+    <owl:Class rdf:about="https://schema.org/Place"/>
+    
+
+
+    <!-- https://schema.org/Vehicle -->
+
+
+    <owl:Class rdf:about="https://schema.org/Vehicle"/>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataOneOf"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataOneOf"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataOneOf"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataOneOf"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataOneOf"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataOneOf"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataOneOf"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataOneOf"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataOneOf"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataOneOf"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataOneOf"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataOneOf"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataOneOf"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataOneOf"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataOneOf"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataOneOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://example.org/caso#hasAlignment">
+        <rdfs:comment>The alignment of the road.</rdfs:comment>
+        <rdfs:label>Road Alignment</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/caso#hasCause">
+        <rdfs:comment>The cause of the accident.</rdfs:comment>
+        <rdfs:label>Cause of Accident</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/caso#hasClass">
+        <rdfs:comment>The class of the casualty (e.g., driver, pedestrian, passenger).</rdfs:comment>
+        <rdfs:label>Casualty Class</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/caso#hasCollisionType">
+        <rdfs:comment>The type of collision during the accident.</rdfs:comment>
+        <rdfs:label>Collision Type</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/caso#hasDefect">
+        <rdfs:comment>The defect status of the vehicle.</rdfs:comment>
+        <rdfs:label>Vehicle Defect</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/caso#hasFitness">
+        <rdfs:comment>The fitness or health condition of the casualty.</rdfs:comment>
+        <rdfs:label>Casualty Fitness</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/caso#hasJunctionType">
+        <rdfs:comment>The type of junction on the road.</rdfs:comment>
+        <rdfs:label>Junction Type</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/caso#hasLaneType">
+        <rdfs:comment>The type of road lane.</rdfs:comment>
+        <rdfs:label>Road Lane Type</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/caso#hasLightCondition">
+        <rdfs:comment>The light condition during the accident.</rdfs:comment>
+        <rdfs:label>Light Condition</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/caso#hasPedestrianMovement">
+        <rdfs:comment>The movement of the pedestrian during the accident.</rdfs:comment>
+        <rdfs:label>Pedestrian Movement</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/caso#hasSeverity">
+        <rdfs:comment>The severity of the accident.</rdfs:comment>
+        <rdfs:label>Accident Severity</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/caso#hasSurfaceCondition">
+        <rdfs:comment>The condition of the road surface.</rdfs:comment>
+        <rdfs:label>Road Surface Condition</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/caso#hasSurfaceType">
+        <rdfs:comment>The type of road surface.</rdfs:comment>
+        <rdfs:label>Road Surface Type</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/caso#hasVehicleMovement">
+        <rdfs:comment>The movement of the vehicle during the accident.</rdfs:comment>
+        <rdfs:label>Vehicle Movement</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/caso#hasWeatherCondition">
+        <rdfs:comment>The weather condition during the accident.</rdfs:comment>
+        <rdfs:label>Weather Condition</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/caso#hasWork">
+        <rdfs:comment>The occupation of the casualty.</rdfs:comment>
+        <rdfs:label>Casualty Work</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
