@@ -13,7 +13,17 @@
 caso:CarAccidentSeverityOntology a owl:Ontology ;
     rdfs:label "Car Accident Severity Ontology (CASO)" ;
     rdfs:comment "An ontology for modeling car accident severity and related factors. Reuses existing vocabularies where applicable." ;
-    dct:issued "2023-10-01"^^xsd:date ;
+ dct:abstract """
+        The Car Accident Severity Ontology (CASO) is a formalized knowledge representation framework designed to model factors influencing the severity of car accidents.
+    """ ;
+    dct:description """
+
+
+        The Car Accident Severity Ontology (CASO) addresses this challenge by providing a comprehensive and reusable semantic model for representing car accident severity and its associated factors. CASO leverages established ontologies and vocabularies to ensure interoperability with existing datasets and tools, while introducing domain-specific concepts tailored to accident analysis. By formalizing the relationships between accident entities, CASO enables advanced querying, reasoning, and knowledge extraction, supporting applications in accident investigation, risk assessment, and policy development.
+
+        This document outlines the structure, design principles, and potential use cases of CASO, demonstrating its value as a resource for researchers and practitioners in the field of transportation safety.
+    """ ;
+    dct:issued "2024-01-28"^^xsd:date ;
     dct:creator "Tibebe Beshah" ;
     dct:license <http://creativecommons.org/licenses/by/4.0/> .
 
@@ -209,3 +219,4 @@ caso:hasPedestrianMovement a owl:DatatypeProperty ;
     rdfs:range [ a owl:DataOneOf ;
                  owl:oneOf ( "While following a vehicle" "While walking with his left hand where there is no footpath" "While traveling on a road without a pedestrian crossing" "While crossing the pedestrian crossing line" "While walking on the sidewalk" "Sitting or lying down in the driveway" "Getting on or off a vehicle" "Others" ) ] ;
     rdfs:label "Pedestrian Movement" ;
+    rdfs:comment "The movement of the pedestrian during the accident." .
