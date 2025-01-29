@@ -24,7 +24,7 @@ caso:CarAccidentSeverityOntology a owl:Ontology ;
         This document outlines the structure, design principles, and potential use cases of CASO, demonstrating its value as a resource for researchers and practitioners in the field of transportation safety.
     """ ;
     dct:issued "2024-01-28"^^xsd:date ;
-    dct:creator "Tibebe Beshah" ;
+    dct:creator dct:creator "Tibebe Beshah", "Hizkiel Mitiku Alemayehu" ;
     dct:license <http://creativecommons.org/licenses/by/4.0/> .
 
 # Classes
