@@ -1,4 +1,4 @@
-@prefix raso: <https://github.com/dice-group/raso/edit/main/raso.owl#> .
+@prefix rtaso: <https://github.com/dice-group/rtaso/main/rtaso.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -10,213 +10,139 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # Ontology Declaration
-raso:CarAccidentSeverityOntology a owl:Ontology ;
-    rdfs:label "Car Accident Severity Ontology (raso)" ;
+rtaso:RoadTraficAccidentSeverityOntology a owl:Ontology ;
+    rdfs:label "Car Accident Severity Ontology (rtaso)" ;
     rdfs:comment "An ontology for modeling car accident severity and related factors. Reuses existing vocabularies where applicable." ;
- dct:abstract """
-        The Car Accident Severity Ontology (raso) is a formalized knowledge representation framework designed to model factors influencing the severity of car accidents.
+    dct:abstract """
+        The Car Accident Severity Ontology (rtaso) is a formalized knowledge representation framework designed to model factors influencing the severity of car accidents.
     """ ;
     dct:description """
+        The Car Accident Severity Ontology (rtaso) provides a comprehensive and reusable semantic model for representing car accident severity and its associated factors. 
+        It leverages established ontologies and vocabularies to ensure interoperability with existing datasets and tools, while introducing domain-specific concepts tailored to accident analysis. 
+        By formalizing relationships between accident entities, rtaso enables advanced querying, reasoning, and knowledge extraction, supporting applications in accident investigation, risk assessment, and policy development.
 
-
-        The Car Accident Severity Ontology (raso) addresses this challenge by providing a comprehensive and reusable semantic model for representing car accident severity and its associated factors. raso leverages established ontologies and vocabularies to ensure interoperability with existing datasets and tools, while introducing domain-specific concepts tailored to accident analysis. By formalizing the relationships between accident entities, raso enables advanced querying, reasoning, and knowledge extraction, supporting applications in accident investigation, risk assessment, and policy development.
-
-        This document outlines the structure, design principles, and potential use cases of raso, demonstrating its value as a resource for researchers and practitioners in the field of transportation safety.
+        This document outlines the structure, design principles, and potential use cases of rtaso, demonstrating its value as a resource for researchers and practitioners in the field of transportation safety.
     """ ;
     dct:issued "2024-01-28"^^xsd:date ;
-    dct:creator dct:creator "Tibebe Beshah," "Hizkiel Mitiku Alemayehu,"  "Axel-Cyrille Ngonga Ngomo"  ;
+    dct:creator "Tibebe Beshah" ;
+    dct:creator "Hizkiel Mitiku Alemayehu" ;
+    dct:creator "Axel-Cyrille Ngonga Ngomo" ;
     dct:license <http://creativecommons.org/licenses/by/4.0/> .
 
 # Classes
 ## Reused Classes
-raso:Driver a owl:Class ;
+rtaso:Driver a owl:Class ;
     rdfs:label "Driver" ;
     rdfs:comment "Represents the driver involved in an accident." ;
     rdfs:subClassOf foaf:Person .
 
-raso:Vehicle a owl:Class ;
+rtaso:Vehicle a owl:Class ;
     rdfs:label "Vehicle" ;
     rdfs:comment "Represents the vehicle involved in an accident." ;
     rdfs:subClassOf schema:Vehicle .
 
-raso:Accident a owl:Class ;
+rtaso:Accident a owl:Class ;
     rdfs:label "Accident" ;
     rdfs:comment "Represents an accident event." ;
     rdfs:subClassOf dolce:Event .
 
-raso:Road a owl:Class ;
+rtaso:Road a owl:Class ;
     rdfs:label "Road" ;
     rdfs:comment "Represents the road conditions during an accident." ;
     rdfs:subClassOf schema:Place .
 
-raso:Environment a owl:Class ;
+rtaso:Environment a owl:Class ;
     rdfs:label "Environment" ;
     rdfs:comment "Represents the environmental conditions during an accident." ;
     rdfs:subClassOf schema:Place .
 
-raso:Casualty a owl:Class ;
+rtaso:Casualty a owl:Class ;
     rdfs:label "Casualty" ;
     rdfs:comment "Represents the victims or casualties of an accident." ;
     rdfs:subClassOf foaf:Person .
 
 # Properties (Attributes/Features)
 ## Reused Properties
-raso:hasGender a owl:DatatypeProperty ;
-    rdfs:domain raso:Driver ;
-    rdfs:range xsd:string ;  # Or use an enumerated list
+rtaso:hasGender a owl:DatatypeProperty ;
+    rdfs:domain rtaso:Driver ;
+    rdfs:range xsd:string ;
     rdfs:label "Driver Gender" ;
     rdfs:comment "The gender of the driver." .
 
-raso:hasAge a owl:DatatypeProperty ;
-    rdfs:domain raso:Driver ;
+rtaso:hasAge a owl:DatatypeProperty ;
+    rdfs:domain rtaso:Driver ;
     rdfs:range xsd:integer ;
     rdfs:label "Driver Age" ;
     rdfs:comment "The age of the driver." .
 
-raso:hasDrivingExperience a owl:DatatypeProperty ;
-    rdfs:domain raso:Driver ;
+rtaso:hasDrivingExperience a owl:DatatypeProperty ;
+    rdfs:domain rtaso:Driver ;
     rdfs:range xsd:integer ;
     rdfs:label "Driving Experience" ;
     rdfs:comment "The driving experience of the driver in years." .
 
-raso:hasEducationLevel a owl:DatatypeProperty ;
-    rdfs:domain raso:Driver ;
-    rdfs:range xsd:string ;  # Or use an enumerated list
+rtaso:hasEducationLevel a owl:DatatypeProperty ;
+    rdfs:domain rtaso:Driver ;
+    rdfs:range xsd:string ;
     rdfs:label "Education Level" ;
     rdfs:comment "The education level of the driver." .
 
-raso:hasVehicleRelation a owl:ObjectProperty ;
-    rdfs:domain raso:Driver ;
-    rdfs:range raso:Vehicle ;
+rtaso:hasVehicleRelation a owl:ObjectProperty ;
+    rdfs:domain rtaso:Driver ;
+    rdfs:range rtaso:Vehicle ;
     rdfs:label "Vehicle Relation" ;
     rdfs:comment "The relationship of the driver to the vehicle." .
 
-raso:hasType a owl:DatatypeProperty ;
-    rdfs:domain raso:Vehicle ;
-    rdfs:range xsd:string ;  # Or use an enumerated list
+rtaso:hasType a owl:DatatypeProperty ;
+    rdfs:domain rtaso:Vehicle ;
+    rdfs:range xsd:string ;
     rdfs:label "Vehicle Type" ;
     rdfs:comment "The type of vehicle involved in the accident." .
 
-raso:hasServiceLife a owl:DatatypeProperty ;
-    rdfs:domain raso:Vehicle ;
+rtaso:hasServiceLife a owl:DatatypeProperty ;
+    rdfs:domain rtaso:Vehicle ;
     rdfs:range xsd:integer ;
     rdfs:label "Service Life" ;
     rdfs:comment "The service life of the vehicle in years." .
 
-raso:hasDefect a owl:DatatypeProperty ;
-    rdfs:domain raso:Vehicle ;
-    rdfs:range [ a owl:DataOneOf ;
-                 owl:oneOf ( "Brake defect" "Without defect" "Another mechanical defect" ) ] ;
-    rdfs:label "Vehicle Defect" ;
-    rdfs:comment "The defect status of the vehicle." .
-
-raso:hasVehicleMovement a owl:DatatypeProperty ;
-    rdfs:domain raso:Accident ;
-    rdfs:range [ a owl:DataOneOf ;
-                 owl:oneOf ( "Moving backward" "Turning to the right" "Turning to the left" "Travelling straight" "Entering the path of separation" "Entering intersection" "Stopping" "Unknown" "Others" ) ] ;
+rtaso:hasVehicleMovement a owl:DatatypeProperty ;
+    rdfs:domain rtaso:Accident ;
+    rdfs:range xsd:string ;
     rdfs:label "Vehicle Movement" ;
     rdfs:comment "The movement of the vehicle during the accident." .
 
-raso:hasCollisionType a owl:DatatypeProperty ;
-    rdfs:domain raso:Accident ;
-    rdfs:range [ a owl:DataOneOf ;
-                 owl:oneOf ( "Crushing an inanimate object" "Side-by-side collision" "Front and side collision" "Front and rear collision" "Hitting a parked vehicle" "Overturning" "Frontal collision" ) ] ;
+rtaso:hasCollisionType a owl:DatatypeProperty ;
+    rdfs:domain rtaso:Accident ;
+    rdfs:range xsd:string ;
     rdfs:label "Collision Type" ;
     rdfs:comment "The type of collision during the accident." .
 
-raso:hasCause a owl:DatatypeProperty ;
-    rdfs:domain raso:Accident ;
-    rdfs:range [ a owl:DataOneOf ;
-                 owl:oneOf ( "Improperly starting up" "Driving over a certain speed" "Not driving at a distance" "Failure to give way to pedestrians" "Not giving priority to the vehicle" "Violating the sign of give way" "Improper passing another vehicle" "Driving left to the right" "Drunk driving" "Unknown" "Others" ) ] ;
+rtaso:hasCause a owl:DatatypeProperty ;
+    rdfs:domain rtaso:Accident ;
+    rdfs:range xsd:string ;
     rdfs:label "Cause of Accident" ;
     rdfs:comment "The cause of the accident." .
 
-raso:hasArea a owl:ObjectProperty ;
-    rdfs:domain raso:Accident ;
-    rdfs:range schema:Place ;
-    rdfs:label "Accident Area" ;
-    rdfs:comment "The area where the accident occurred." .
-
-raso:hasSeverity a owl:DatatypeProperty ;
-    rdfs:domain raso:Accident ;
-    rdfs:range [ a owl:DataOneOf ;
-                 owl:oneOf ( "Fatal" "Serious injury" "Slight injury" "No injury" ) ] ;
+rtaso:hasSeverity a owl:DatatypeProperty ;
+    rdfs:domain rtaso:Accident ;
+    rdfs:range xsd:string ;
     rdfs:label "Accident Severity" ;
     rdfs:comment "The severity of the accident." .
 
-raso:hasSurfaceType a owl:DatatypeProperty ;
-    rdfs:domain raso:Road ;
-    rdfs:range [ a owl:DataOneOf ;
-                 owl:oneOf ( "Good asphalt" "Perforated asphalt" "Gravel" "Paving" ) ] ;
-    rdfs:label "Road Surface Type" ;
-    rdfs:comment "The type of road surface." .
-
-raso:hasLaneType a owl:DatatypeProperty ;
-    rdfs:domain raso:Road ;
-    rdfs:range [ a owl:DataOneOf ;
-                 owl:oneOf ( "Double carriage way" "Two ways" "One way" "Divided with solid line" "Divided with broken line" ) ] ;
-    rdfs:label "Road Lane Type" ;
-    rdfs:comment "The type of road lane." .
-
-raso:hasAlignment a owl:DatatypeProperty ;
-    rdfs:domain raso:Road ;
-    rdfs:range [ a owl:DataOneOf ;
-                 owl:oneOf ( "Straight and bumpy road" "Straight and flat road" "Straight and slightly inclined" "Straight and highly inclined" "Uphill" "Slopy" "Others" ) ] ;
-    rdfs:label "Road Alignment" ;
-    rdfs:comment "The alignment of the road." .
-
-raso:hasSurfaceCondition a owl:DatatypeProperty ;
-    rdfs:domain raso:Road ;
-    rdfs:range [ a owl:DataOneOf ;
-                 owl:oneOf ( "Dry" "Mud" "Wet" "Other" ) ] ;
-    rdfs:label "Road Surface Condition" ;
-    rdfs:comment "The condition of the road surface." .
-
-raso:hasJunctionType a owl:DatatypeProperty ;
-    rdfs:domain raso:Road ;
-    rdfs:range [ a owl:DataOneOf ;
-                 owl:oneOf ( "T shape" "Y shape" "No junction" "O shape" "Railroad crossing" "X shape" "Others" ) ] ;
-    rdfs:label "Junction Type" ;
-    rdfs:comment "The type of junction on the road." .
-
-raso:hasWeatherCondition a owl:DatatypeProperty ;
-    rdfs:domain raso:Environment ;
-    rdfs:range [ a owl:DataOneOf ;
-                 owl:oneOf ( "Hot" "Cloud" "Good Air" "Heavy rain" "Cold" "Light rain" "Strong wind" "Others" ) ] ;
+rtaso:hasWeatherCondition a owl:DatatypeProperty ;
+    rdfs:domain rtaso:Environment ;
+    rdfs:range xsd:string ;
     rdfs:label "Weather Condition" ;
     rdfs:comment "The weather condition during the accident." .
 
-raso:hasLightCondition a owl:DatatypeProperty ;
-    rdfs:domain raso:Environment ;
-    rdfs:range [ a owl:DataOneOf ;
-                 owl:oneOf ( "Sun rising" "In day light" "Sun setting" "Dark with no street light" "Dark with weak street light" "Dark with strong street light" "Others" ) ] ;
+rtaso:hasLightCondition a owl:DatatypeProperty ;
+    rdfs:domain rtaso:Environment ;
+    rdfs:range xsd:string ;
     rdfs:label "Light Condition" ;
     rdfs:comment "The light condition during the accident." .
 
-raso:hasClass a owl:DatatypeProperty ;
-    rdfs:domain raso:Casualty ;
-    rdfs:range [ a owl:DataOneOf ;
-                 owl:oneOf ( "Drivers" "Pedestrians" "Passenger" ) ] ;
-    rdfs:label "Casualty Class" ;
-    rdfs:comment "The class of the casualty (e.g., driver, pedestrian, passenger)." .
-
-raso:hasWork a owl:DatatypeProperty ;
-    rdfs:domain raso:Casualty ;
-    rdfs:range [ a owl:DataOneOf ;
-                 owl:oneOf ( "Employed" "Unemployed" "Farmer" "Student" "Others" ) ] ;
-    rdfs:label "Casualty Work" ;
-    rdfs:comment "The occupation of the casualty." .
-
-raso:hasFitness a owl:DatatypeProperty ;
-    rdfs:domain raso:Casualty ;
-    rdfs:range [ a owl:DataOneOf ;
-                 owl:oneOf ( "Healthy" "Blind" "Disabled" "Drunk" "Unknown" "Others" ) ] ;
-    rdfs:label "Casualty Fitness" ;
-    rdfs:comment "The fitness or health condition of the casualty." .
-
-raso:hasPedestrianMovement a owl:DatatypeProperty ;
-    rdfs:domain raso:Casualty ;
-    rdfs:range [ a owl:DataOneOf ;
-                 owl:oneOf ( "While following a vehicle" "While walking with his left hand where there is no footpath" "While traveling on a road without a pedestrian crossing" "While crossing the pedestrian crossing line" "While walking on the sidewalk" "Sitting or lying down in the driveway" "Getting on or off a vehicle" "Others" ) ] ;
+rtaso:hasPedestrianMovement a owl:DatatypeProperty ;
+    rdfs:domain rtaso:Casualty ;
+    rdfs:range xsd:string ;
     rdfs:label "Pedestrian Movement" ;
     rdfs:comment "The movement of the pedestrian during the accident." .
