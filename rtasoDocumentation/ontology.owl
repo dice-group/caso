@@ -1,0 +1,399 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/dice-group/rtaso/main/rtaso.owl#RoadTraficAccidentSeverityOntology#"
+     xml:base="https://github.com/dice-group/rtaso/main/rtaso.owl#RoadTraficAccidentSeverityOntology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://github.com/dice-group/rtaso/main/rtaso.owl#RoadTraficAccidentSeverityOntology">
+        <terms:abstract>
+        The Car Accident Severity Ontology (rtaso) is a formalized knowledge representation framework designed to model factors influencing the severity of car accidents.
+    </terms:abstract>
+        <terms:creator>Axel-Cyrille Ngonga Ngomo</terms:creator>
+        <terms:creator>Hizkiel Mitiku Alemayehu</terms:creator>
+        <terms:creator>Tibebe Beshah</terms:creator>
+        <terms:description>
+        The Car Accident Severity Ontology (rtaso) provides a comprehensive and reusable semantic model for representing car accident severity and its associated factors. 
+        It leverages established ontologies and vocabularies to ensure interoperability with existing datasets and tools, while introducing domain-specific concepts tailored to accident analysis. 
+        By formalizing relationships between accident entities, rtaso enables advanced querying, reasoning, and knowledge extraction, supporting applications in accident investigation, risk assessment, and policy development.
+
+        This document outlines the structure, design principles, and potential use cases of rtaso, demonstrating its value as a resource for researchers and practitioners in the field of transportation safety.
+    </terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-28</terms:issued>
+        <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <rdfs:comment>An ontology for modeling car accident severity and related factors. Reuses existing vocabularies where applicable.</rdfs:comment>
+        <rdfs:label>Car Accident Severity Ontology (rtaso)</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://github.com/dice-group/rtaso/main/rtaso.owl#hasVehicleRelation -->
+
+
+    <owl:ObjectProperty rdf:about="https://github.com/dice-group/rtaso/main/rtaso.owl#hasVehicleRelation">
+        <rdfs:domain rdf:resource="https://github.com/dice-group/rtaso/main/rtaso.owl#Driver"/>
+        <rdfs:range rdf:resource="https://github.com/dice-group/rtaso/main/rtaso.owl#Vehicle"/>
+        <rdfs:comment>The relationship of the driver to the vehicle.</rdfs:comment>
+        <rdfs:label>Vehicle Relation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://github.com/dice-group/rtaso/main/rtaso.owl#hasAge -->
+
+
+    <owl:DatatypeProperty rdf:about="https://github.com/dice-group/rtaso/main/rtaso.owl#hasAge">
+        <rdfs:domain rdf:resource="https://github.com/dice-group/rtaso/main/rtaso.owl#Driver"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>The age of the driver.</rdfs:comment>
+        <rdfs:label>Driver Age</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/dice-group/rtaso/main/rtaso.owl#hasCause -->
+
+
+    <owl:DatatypeProperty rdf:about="https://github.com/dice-group/rtaso/main/rtaso.owl#hasCause">
+        <rdfs:domain rdf:resource="https://github.com/dice-group/rtaso/main/rtaso.owl#Accident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The cause of the accident.</rdfs:comment>
+        <rdfs:label>Cause of Accident</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/dice-group/rtaso/main/rtaso.owl#hasCollisionType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://github.com/dice-group/rtaso/main/rtaso.owl#hasCollisionType">
+        <rdfs:domain rdf:resource="https://github.com/dice-group/rtaso/main/rtaso.owl#Accident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The type of collision during the accident.</rdfs:comment>
+        <rdfs:label>Collision Type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/dice-group/rtaso/main/rtaso.owl#hasDrivingExperience -->
+
+
+    <owl:DatatypeProperty rdf:about="https://github.com/dice-group/rtaso/main/rtaso.owl#hasDrivingExperience">
+        <rdfs:domain rdf:resource="https://github.com/dice-group/rtaso/main/rtaso.owl#Driver"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>The driving experience of the driver in years.</rdfs:comment>
+        <rdfs:label>Driving Experience</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/dice-group/rtaso/main/rtaso.owl#hasEducationLevel -->
+
+
+    <owl:DatatypeProperty rdf:about="https://github.com/dice-group/rtaso/main/rtaso.owl#hasEducationLevel">
+        <rdfs:domain rdf:resource="https://github.com/dice-group/rtaso/main/rtaso.owl#Driver"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The education level of the driver.</rdfs:comment>
+        <rdfs:label>Education Level</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/dice-group/rtaso/main/rtaso.owl#hasGender -->
+
+
+    <owl:DatatypeProperty rdf:about="https://github.com/dice-group/rtaso/main/rtaso.owl#hasGender">
+        <rdfs:domain rdf:resource="https://github.com/dice-group/rtaso/main/rtaso.owl#Driver"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The gender of the driver.</rdfs:comment>
+        <rdfs:label>Driver Gender</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/dice-group/rtaso/main/rtaso.owl#hasLightCondition -->
+
+
+    <owl:DatatypeProperty rdf:about="https://github.com/dice-group/rtaso/main/rtaso.owl#hasLightCondition">
+        <rdfs:domain rdf:resource="https://github.com/dice-group/rtaso/main/rtaso.owl#Environment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The light condition during the accident.</rdfs:comment>
+        <rdfs:label>Light Condition</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/dice-group/rtaso/main/rtaso.owl#hasPedestrianMovement -->
+
+
+    <owl:DatatypeProperty rdf:about="https://github.com/dice-group/rtaso/main/rtaso.owl#hasPedestrianMovement">
+        <rdfs:domain rdf:resource="https://github.com/dice-group/rtaso/main/rtaso.owl#Casualty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The movement of the pedestrian during the accident.</rdfs:comment>
+        <rdfs:label>Pedestrian Movement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/dice-group/rtaso/main/rtaso.owl#hasServiceLife -->
+
+
+    <owl:DatatypeProperty rdf:about="https://github.com/dice-group/rtaso/main/rtaso.owl#hasServiceLife">
+        <rdfs:domain rdf:resource="https://github.com/dice-group/rtaso/main/rtaso.owl#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>The service life of the vehicle in years.</rdfs:comment>
+        <rdfs:label>Service Life</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/dice-group/rtaso/main/rtaso.owl#hasSeverity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://github.com/dice-group/rtaso/main/rtaso.owl#hasSeverity">
+        <rdfs:domain rdf:resource="https://github.com/dice-group/rtaso/main/rtaso.owl#Accident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The severity of the accident.</rdfs:comment>
+        <rdfs:label>Accident Severity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/dice-group/rtaso/main/rtaso.owl#hasType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://github.com/dice-group/rtaso/main/rtaso.owl#hasType">
+        <rdfs:domain rdf:resource="https://github.com/dice-group/rtaso/main/rtaso.owl#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The type of vehicle involved in the accident.</rdfs:comment>
+        <rdfs:label>Vehicle Type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/dice-group/rtaso/main/rtaso.owl#hasVehicleMovement -->
+
+
+    <owl:DatatypeProperty rdf:about="https://github.com/dice-group/rtaso/main/rtaso.owl#hasVehicleMovement">
+        <rdfs:domain rdf:resource="https://github.com/dice-group/rtaso/main/rtaso.owl#Accident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The movement of the vehicle during the accident.</rdfs:comment>
+        <rdfs:label>Vehicle Movement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/dice-group/rtaso/main/rtaso.owl#hasWeatherCondition -->
+
+
+    <owl:DatatypeProperty rdf:about="https://github.com/dice-group/rtaso/main/rtaso.owl#hasWeatherCondition">
+        <rdfs:domain rdf:resource="https://github.com/dice-group/rtaso/main/rtaso.owl#Environment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The weather condition during the accident.</rdfs:comment>
+        <rdfs:label>Weather Condition</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.loa.istc.cnr.it/ontologies/DOLCE-Lite.owl#Event -->
+
+
+    <owl:Class rdf:about="http://www.loa.istc.cnr.it/ontologies/DOLCE-Lite.owl#Event"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- https://github.com/dice-group/rtaso/main/rtaso.owl#Accident -->
+
+
+    <owl:Class rdf:about="https://github.com/dice-group/rtaso/main/rtaso.owl#Accident">
+        <rdfs:subClassOf rdf:resource="http://www.loa.istc.cnr.it/ontologies/DOLCE-Lite.owl#Event"/>
+        <rdfs:comment>Represents an accident event.</rdfs:comment>
+        <rdfs:label>Accident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/dice-group/rtaso/main/rtaso.owl#Casualty -->
+
+
+    <owl:Class rdf:about="https://github.com/dice-group/rtaso/main/rtaso.owl#Casualty">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment>Represents the victims or casualties of an accident.</rdfs:comment>
+        <rdfs:label>Casualty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/dice-group/rtaso/main/rtaso.owl#Driver -->
+
+
+    <owl:Class rdf:about="https://github.com/dice-group/rtaso/main/rtaso.owl#Driver">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment>Represents the driver involved in an accident.</rdfs:comment>
+        <rdfs:label>Driver</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/dice-group/rtaso/main/rtaso.owl#Environment -->
+
+
+    <owl:Class rdf:about="https://github.com/dice-group/rtaso/main/rtaso.owl#Environment">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Place"/>
+        <rdfs:comment>Represents the environmental conditions during an accident.</rdfs:comment>
+        <rdfs:label>Environment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/dice-group/rtaso/main/rtaso.owl#Road -->
+
+
+    <owl:Class rdf:about="https://github.com/dice-group/rtaso/main/rtaso.owl#Road">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Place"/>
+        <rdfs:comment>Represents the road conditions during an accident.</rdfs:comment>
+        <rdfs:label>Road</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/dice-group/rtaso/main/rtaso.owl#Vehicle -->
+
+
+    <owl:Class rdf:about="https://github.com/dice-group/rtaso/main/rtaso.owl#Vehicle">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Vehicle"/>
+        <rdfs:comment>Represents the vehicle involved in an accident.</rdfs:comment>
+        <rdfs:label>Vehicle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Place -->
+
+
+    <owl:Class rdf:about="https://schema.org/Place"/>
+    
+
+
+    <!-- https://schema.org/Vehicle -->
+
+
+    <owl:Class rdf:about="https://schema.org/Vehicle"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
